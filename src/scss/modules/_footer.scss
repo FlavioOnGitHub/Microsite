@@ -1,0 +1,25 @@
+footer {
+  background: linear-gradient(180deg, #ba3e4f 0%, #541c24 100%);
+  padding-top: 80px;
+}
+
+.footer {
+  padding: 0 30px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .footer-links {
+    display: flex;
+    gap: 30px;
+
+    a {
+      color: var(--yellow, #f3bd20);
+      font-family: Migra;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+    }
+  }
+}
