@@ -1,0 +1,25 @@
+.button {
+  background-color: var(--button-background);
+  display: flex;
+  width: 210px;
+  padding: 22px 30px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  color: var(--yellow);
+
+  span {
+    font-family: Migra;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+
+  img {
+    position: absolute;
+    top: -14px;
+    left: -18px;
+    width: 250px;
+  }
+}

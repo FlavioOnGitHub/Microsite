@@ -1,3 +1,8 @@
+:root {
+  --button-background: #2e1f0e;
+  --yellow: #f3bd20;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,4 +16,48 @@ a {
 img,
 video {
   display: block;
+}
+
+@font-face {
+  font-family: "Migra";
+  src: url("../fonts/transfonter.org-20241112-082547/Migra-Extrabold.woff2")
+      format("woff2"),
+    url("../fonts/transfonter.org-20241112-082547/Migra-Extrabold.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Migra";
+  src: url("../fonts/transfonter.org-20241112-082547/Migra-Extralight.woff2")
+      format("woff2"),
+    url("../fonts/transfonter.org-20241112-082547/Migra-Extralight.woff")
+      format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Migra";
+  src: url("../fonts/transfonter.org-20241112-082547/MigraItalic-ExtraboldItalic.woff2")
+      format("woff2"),
+    url("../fonts/transfonter.org-20241112-082547/MigraItalic-ExtraboldItalic.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Migra";
+  src: url("../fonts/transfonter.org-20241112-082547/MigraItalic-ExtralightItalic.woff2")
+      format("woff2"),
+    url("../fonts/transfonter.org-20241112-082547/MigraItalic-ExtralightItalic.woff")
+      format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
 }
