@@ -20,22 +20,22 @@ const characterHeading = document.querySelector(".character-section-heading");
 const characterButton = document.querySelectorAll(".button-character");
 
 const hiddenClaude = document.querySelector(
-  ".character-section-image:nth-child(1)"
+  ".character-section-image img:nth-of-type(2)"
 );
 const hiddenYsa = document.querySelector(
-  ".character-section-image:nth-child(2)"
+  ".character-section-image img:nth-of-type(3)"
 );
 const hiddenBaron = document.querySelector(
-  ".character-section-image:nth-child(3)"
+  ".character-section-image img:nth-of-type(4)"
 );
 const hiddenRoi = document.querySelector(
-  ".character-section-image:nth-child(4)"
+  ".character-section-image img:nth-of-type(5)"
 );
 
-const claudeStatus = 0;
-const ysaStatus = 0;
-const baronStatus = 0;
-const roiStatus = 0;
+let claudeStatus = 0;
+let ysaStatus = 0;
+let baronStatus = 0;
+let roiStatus = 0;
 
 function lockScroll() {
   document.body.classList.add("lock-scroll");
@@ -90,12 +90,25 @@ characterButton.forEach(function (button) {
     allCards.classList.remove("character-section-blur");
     characterHeading.classList.remove("character-section-blur");
     window.scrollTo({
-      top: 1800,
+      top: 1900,
       behavior: "smooth",
     });
 
     if (claudeStatus === 1) {
       hiddenClaude.classList.add("character-section-image-reveal");
     }
+
+    if (ysaStatus === 1) {
+      hiddenYsa.classList.add("character-section-image-reveal");
+    }
+
+    if (baronStatus === 1) {
+      hiddenBaron.classList.add("character-section-image-reveal");
+    }
+
+    if (roiStatus === 1) {
+      hiddenRoi.classList.add("character-section-image-reveal");
+    }
+    unlockScroll();
   });
 });
