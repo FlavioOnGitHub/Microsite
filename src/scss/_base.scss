@@ -18,6 +18,10 @@ video {
   display: block;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "Migra";
   src: url("../fonts/transfonter.org-20241112-082547/Migra-Extrabold.woff2")
@@ -60,4 +64,8 @@ video {
   font-weight: 200;
   font-style: italic;
   font-display: swap;
+}
+
+.lock-scroll {
+  overflow-y: hidden;
 }

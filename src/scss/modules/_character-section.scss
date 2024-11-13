@@ -37,20 +37,12 @@
       height: 315px;
       position: relative;
 
-      img {
-        position: absolute;
+      &:hover {
+        cursor: pointer;
       }
 
-      &:nth-child(1) .character-section-card-clip {
-        img:nth-child(1) {
-          left: 10px;
-          top: 5;
-        }
-
-        img:nth-child(2) {
-          left: -120px;
-          top: -140px;
-        }
+      img {
+        position: absolute;
       }
 
       .character-section-card-border {
@@ -75,7 +67,7 @@
 
       &:nth-child(1) .character-section-card-clip {
         img:nth-child(1) {
-          left: 10px;
+          left: 0;
           top: 5px;
         }
 
@@ -137,4 +129,240 @@
     position: absolute;
     top: 0;
   }
+}
+
+.character-section-image-reveal {
+  opacity: 0;
+}
+
+// The class that blurrs the card elements
+.character-section-blur {
+  filter: blur(20);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+// global properties for the pop-ups sections that appear when clicking on the cards
+.character-section-pop-up {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+
+  .character-section-pop-up-heading {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: "Carol Gothic";
+    font-size: 210px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 15px;
+  }
+}
+
+// specific properties for each character
+.character-section-pop-up-claude {
+  pointer-events: none;
+  left: -2500px;
+  .character-section-pop-up-heading {
+    color: #8accef;
+    width: calc(100vw - 3vw);
+    justify-content: right;
+    gap: 90px;
+  }
+
+  p {
+    color: #8accef;
+    font-family: Migra;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-left: 510px;
+    margin-right: 135px;
+  }
+
+  img {
+    position: absolute;
+  }
+
+  .character-section-pop-up-image-1 {
+    top: 50px;
+    left: -225px;
+    z-index: 1;
+  }
+
+  .character-section-pop-up-image-2 {
+    top: 445px;
+    left: 195px;
+  }
+
+  .character-section-pop-up-image-3 {
+    top: 415px;
+    left: 575px;
+    z-index: 1;
+  }
+
+  .character-section-pop-up-image-4 {
+    top: 460px;
+    left: 845px;
+  }
+}
+
+// specific properties for ysa
+.character-section-pop-up-ysa {
+  pointer-events: none;
+  left: -2500px;
+  .character-section-pop-up-heading {
+    color: #e78153;
+    width: calc(100vw - 3vw);
+    justify-content: right;
+    gap: 90px;
+  }
+
+  p {
+    color: #e78153;
+    font-family: Migra;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-left: 500px;
+    margin-right: 135px;
+  }
+
+  img {
+    position: absolute;
+  }
+
+  .character-section-pop-up-image-1 {
+    top: -50px;
+    left: -20px;
+    z-index: 1;
+  }
+
+  .character-section-pop-up-image-2 {
+    top: 480px;
+    left: 395px;
+  }
+
+  .character-section-pop-up-image-3 {
+    top: 430px;
+    left: 690px;
+    z-index: 1;
+  }
+
+  .character-section-pop-up-image-4 {
+    top: 470px;
+    left: 950px;
+    z-index: 2;
+  }
+}
+
+// specific properties for "le baron"
+.character-section-pop-up-baron {
+  pointer-events: none;
+  left: -2500px;
+  .character-section-pop-up-heading {
+    color: #ffbd00;
+    width: calc(100vw - 3vw);
+    justify-content: right;
+    gap: 90px;
+  }
+
+  p {
+    color: #ffbd00;
+    font-family: Migra;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-left: 520px;
+    margin-right: 125px;
+  }
+
+  img {
+    position: absolute;
+  }
+
+  .character-section-pop-up-image-1 {
+    top: -75px;
+    left: -115px;
+    z-index: 1;
+  }
+
+  .character-section-pop-up-image-2 {
+    top: 465px;
+    left: 565px;
+  }
+
+  .character-section-pop-up-image-3 {
+    top: 480px;
+    left: 820px;
+    z-index: 1;
+  }
+
+  .character-section-pop-up-image-4 {
+    top: 490px;
+    left: 1070px;
+    z-index: 2;
+  }
+}
+
+// specific properties for "le roi"
+.character-section-pop-up-roi {
+  pointer-events: none;
+  left: -2500px;
+  .character-section-pop-up-heading {
+    color: #b581d1;
+    width: calc(100vw - 3vw);
+    justify-content: right;
+    gap: 60px;
+    font-size: 14vw;
+    padding-top: 50px;
+  }
+
+  p {
+    color: #b581d1;
+    font-family: Migra;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-left: 500px;
+    margin-right: 145px;
+    z-index: 3;
+  }
+
+  img {
+    position: absolute;
+  }
+
+  .character-section-pop-up-image-1 {
+    top: 220px;
+    left: -145px;
+    z-index: 1;
+  }
+
+  .character-section-pop-up-image-2 {
+    top: 460px;
+    left: 415px;
+  }
+
+  .character-section-pop-up-image-3 {
+    top: 465px;
+    left: 730px;
+    z-index: 1;
+  }
+
+  .character-section-pop-up-image-4 {
+    top: 480px;
+    left: 1095px;
+    z-index: 2;
+  }
+}
+
+.character-section-pop-up-visible {
+  left: 0px;
 }

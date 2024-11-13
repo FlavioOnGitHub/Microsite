@@ -8,6 +8,15 @@
   align-items: center;
   color: var(--yellow);
   text-decoration: none;
+  transition: scale 0.2s ease-in;
+
+  &:hover {
+    scale: 1.05;
+
+    span {
+      scale: 1.05;
+    }
+  }
 
   span {
     font-family: Migra;
@@ -15,6 +24,7 @@
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+    transition: scale 0.2s ease-in;
   }
 
   img {
@@ -27,4 +37,16 @@
 
 .button-footer {
   background: transparent;
+}
+
+.button-character {
+  width: 320px;
+  pointer-events: all;
+
+  img {
+    position: absolute;
+    top: -14px;
+    left: -20px;
+    width: 360px;
+  }
 }
