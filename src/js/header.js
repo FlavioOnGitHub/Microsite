@@ -16,12 +16,13 @@ const tl = gsap.timeline({
 });
 
 tl.to(".header img:nth-of-type(1)", {
-  y: 50,
+  y: -200,
+  scale: 1.1,
 });
 tl.to(
   ".header img:nth-of-type(2)",
   {
-    y: 50,
+    y: -200,
   },
   "<"
 );
@@ -29,7 +30,7 @@ tl.to(
   ".header img:nth-of-type(3)",
   {
     x: -50,
-    y: 200,
+    y: 40,
     scale: 1.2,
   },
   "<"
@@ -37,7 +38,7 @@ tl.to(
 tl.to(
   ".header img:nth-of-type(4)",
   {
-    y: 100,
+    y: 20,
     x: 100,
   },
   "<"
@@ -45,14 +46,14 @@ tl.to(
 tl.to(
   ".header img:nth-of-type(5)",
   {
-    y: -20,
+    y: 50,
   },
   "<"
 );
 tl.to(
   ".header img:nth-of-type(6)",
   {
-    y: 150,
+    y: 30,
     x: 20,
   },
   "<"
@@ -60,8 +61,15 @@ tl.to(
 tl.to(
   ".header img:nth-of-type(7)",
   {
-    y: 100,
+    y: 20,
     x: -50,
+  },
+  "<"
+);
+tl.to(
+  ".header img:nth-of-type(8)",
+  {
+    y: -200,
   },
   "<"
 );

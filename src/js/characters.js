@@ -18,6 +18,7 @@ const ysaCard = document.querySelector(
 const allCards = document.querySelector(".character-section-card-container");
 const characterHeading = document.querySelector(".character-section-heading");
 const characterButton = document.querySelectorAll(".button-character");
+const characterSection = document.querySelector(".character-section");
 
 const nav = document.querySelector(".nav");
 
@@ -39,12 +40,22 @@ let ysaStatus = 0;
 let baronStatus = 0;
 let roiStatus = 0;
 
+let claudeDiscovered = 0;
+let ysaDiscovered = 0;
+let baronDiscovered = 0;
+let roiDiscovered = 0;
+
 const tlAppear = gsap.timeline();
 const tlDiseappear = gsap.timeline();
 
+const targetPositionStart =
+  characterSection.getBoundingClientRect().top + window.scrollY;
+const targetPositionEnd =
+  hiddenClaude.getBoundingClientRect().top + window.scrollY;
+
 function lockScroll() {
   window.scrollTo({
-    top: 1350,
+    top: targetPositionStart,
     behavior: "smooth",
   });
   document.documentElement.style.overflowY = "hidden";
@@ -347,10 +358,18 @@ characterButton.forEach(function (button) {
             pointerEvents: "none",
             onComplete: function () {
               tlAppear.clear();
-              window.scrollTo({
-                top: 1900,
-                behavior: "smooth",
-              });
+              if (claudeDiscovered === 0) {
+                window.scrollTo({
+                  top: targetPositionEnd,
+                  behavior: "smooth",
+                });
+                setTimeout(() => {
+                  unlockScroll();
+                }, 4000);
+                claudeDiscovered = 1;
+              } else {
+                unlockScroll();
+              }
               nav.classList.remove("nav-scroll-locked");
             },
           },
@@ -417,10 +436,18 @@ characterButton.forEach(function (button) {
             pointerEvents: "none",
             onComplete: function () {
               tlAppear.clear();
-              window.scrollTo({
-                top: 1900,
-                behavior: "smooth",
-              });
+              if (ysaDiscovered === 0) {
+                window.scrollTo({
+                  top: targetPositionEnd,
+                  behavior: "smooth",
+                });
+                setTimeout(() => {
+                  unlockScroll();
+                }, 4000);
+                ysaDiscovered = 1;
+              } else {
+                unlockScroll();
+              }
               nav.classList.remove("nav-scroll-locked");
             },
           },
@@ -491,10 +518,18 @@ characterButton.forEach(function (button) {
             pointerEvents: "none",
             onComplete: function () {
               tlAppear.clear();
-              window.scrollTo({
-                top: 1900,
-                behavior: "smooth",
-              });
+              if (baronDiscovered === 0) {
+                window.scrollTo({
+                  top: targetPositionEnd,
+                  behavior: "smooth",
+                });
+                setTimeout(() => {
+                  unlockScroll();
+                }, 4000);
+                baronDiscovered = 1;
+              } else {
+                unlockScroll();
+              }
               nav.classList.remove("nav-scroll-locked");
             },
           },
@@ -561,10 +596,18 @@ characterButton.forEach(function (button) {
             pointerEvents: "none",
             onComplete: function () {
               tlAppear.clear();
-              window.scrollTo({
-                top: 1900,
-                behavior: "smooth",
-              });
+              if (roiDiscovered === 0) {
+                window.scrollTo({
+                  top: targetPositionEnd,
+                  behavior: "smooth",
+                });
+                setTimeout(() => {
+                  unlockScroll();
+                }, 4000);
+                roiDiscovered = 1;
+              } else {
+                unlockScroll();
+              }
               nav.classList.remove("nav-scroll-locked");
             },
           },
@@ -573,9 +616,6 @@ characterButton.forEach(function (button) {
       hiddenRoi.classList.add("character-section-image-reveal");
       roiStatus = 0;
     }
-    setTimeout(() => {
-      unlockScroll();
-    }, 4000);
   });
 });
 

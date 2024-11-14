@@ -18,6 +18,10 @@
     line-height: normal;
     letter-spacing: 6.4px;
     margin-bottom: 135px;
+
+    span {
+      display: inline-block;
+    }
   }
 
   .purchase-section-content {
@@ -42,7 +46,7 @@
       -webkit-text-stroke-width: 0.5;
       -webkit-text-stroke-color: var(--yellow, #f3bd20);
       font-family: Migra;
-      font-size: 30px;
+      font-size: 28px;
       font-style: normal;
       font-weight: 200;
       line-height: normal;
@@ -51,13 +55,13 @@
       &:nth-of-type(1) {
         margin-left: 730px;
         margin-right: 150px;
-        margin-bottom: 65px;
+        margin-bottom: 45px;
       }
 
       &:nth-of-type(2) {
         margin-left: 620px;
         margin-right: 265px;
-        margin-bottom: 120px;
+        margin-bottom: 80px;
       }
     }
 

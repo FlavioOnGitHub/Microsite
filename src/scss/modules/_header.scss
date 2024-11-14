@@ -48,6 +48,12 @@
       left: 380px;
       top: 400px;
     }
+
+    &:nth-child(8) {
+      z-index: 5;
+      width: 100%;
+      top: 0;
+    }
   }
 }
 
