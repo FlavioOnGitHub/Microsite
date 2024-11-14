@@ -37,6 +37,8 @@
       width: 235px;
       height: 315px;
       position: relative;
+      transform-style: preserve-3d;
+      perspective: 1000px;
 
       &:hover {
         cursor: pointer;
@@ -51,65 +53,64 @@
         top: -12px;
         left: -40px;
         height: 360px;
-      }
-
-      .character-section-card-clip {
-        width: 100%;
-        height: 100%;
         overflow: hidden;
-        position: relative;
-
-        img {
-          &:nth-child(1) {
-            z-index: 1;
-          }
-        }
       }
 
-      &:nth-child(1) .character-section-card-clip {
-        img:nth-child(1) {
+      img:nth-of-type(3) {
+        clip-path: inset(0 20 40 0);
+        width: 110%;
+        height: 120%;
+        top: -10px;
+      }
+
+      &:nth-child(1) {
+        img:nth-child(2) {
           left: 0;
-          top: 5px;
+          z-index: 1;
         }
 
-        img:nth-child(2) {
-          left: -120px;
-          top: -140px;
-        }
-      }
-
-      &:nth-child(2) .character-section-card-clip {
-        img:nth-child(1) {
-          top: 20px;
-        }
-
-        img:nth-child(2) {
-          left: -300px;
-          top: -30px;
+        img:nth-child(3) {
+          left: 0;
+          transform: translateZ(-30px);
         }
       }
 
-      &:nth-child(3) .character-section-card-clip {
-        img:nth-child(1) {
-          top: 30px;
+      &:nth-child(2) {
+        img:nth-child(2) {
+          left: 0;
+          z-index: 1;
+        }
+
+        img:nth-child(3) {
+          left: 0;
+          transform: translateZ(-30px);
+        }
+      }
+
+      &:nth-child(3) {
+        img:nth-child(2) {
           left: -10px;
+          top: 30px;
+          z-index: 1;
         }
 
-        img:nth-child(2) {
-          left: -105px;
-          top: -30px;
+        img:nth-child(3) {
+          left: 0;
+          transform: translateZ(-30px);
         }
       }
 
-      &:nth-child(4) .character-section-card-clip {
-        img:nth-child(1) {
-          left: -100px;
-          top: 40px;
+      &:nth-child(4) {
+        img:nth-child(2) {
+          left: 0;
+          z-index: 1;
+          width: 100%;
+          top: 60px;
         }
 
-        img:nth-child(2) {
-          left: -150px;
-          top: -30px;
+        img:nth-child(3) {
+          left: 0;
+          transform: translateZ(-30px);
         }
       }
     }
