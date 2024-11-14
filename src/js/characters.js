@@ -586,14 +586,12 @@ gsap.fromTo(
     opacity: 0,
   },
   {
-    y: 0,
-    opacity: 1,
     duration: 0.5,
     scrollTrigger: {
       trigger: ".character-section",
       start: "top+=300 80%",
       end: "center 30%",
-      markers: true,
+      markers: false,
       onEnter: () => {
         gsap.to(claudeCard, { delay: 0, y: 0, opacity: 1, duration: 0.3 });
       },
@@ -614,14 +612,12 @@ gsap.fromTo(
     opacity: 0,
   },
   {
-    y: 0,
-    opacity: 1,
     duration: 0.5,
     scrollTrigger: {
       trigger: ".character-section",
       start: "top+=300 80%",
       end: "center 30%",
-      markers: true,
+      markers: false,
       onEnter: () => {
         gsap.to(ysaCard, { delay: 0.2, y: 0, opacity: 1, duration: 0.3 });
       },
@@ -642,14 +638,12 @@ gsap.fromTo(
     opacity: 0,
   },
   {
-    y: 0,
-    opacity: 1,
     duration: 0.5,
     scrollTrigger: {
       trigger: ".character-section",
       start: "top+=300 80%",
       end: "center 30%",
-      markers: true,
+      markers: false,
       onEnter: () => {
         gsap.to(baronCard, { delay: 0.4, y: 0, opacity: 1, duration: 0.3 });
       },
@@ -670,14 +664,12 @@ gsap.fromTo(
     opacity: 0,
   },
   {
-    y: 0,
-    opacity: 1,
     duration: 0.5,
     scrollTrigger: {
       trigger: ".character-section",
       start: "top+=300 80%",
       end: "center 30%",
-      markers: true,
+      markers: false,
       onEnter: () => {
         gsap.to(roiCard, { delay: 0.6, y: 0, opacity: 1, duration: 0.3 });
       },
@@ -698,14 +690,12 @@ gsap.fromTo(
     opacity: 0,
   },
   {
-    y: 0,
-    opacity: 1,
     duration: 0.5,
     scrollTrigger: {
       trigger: ".character-section",
       start: "top 80%",
       end: "center 30%",
-      markers: true,
+      markers: false,
       onEnter: () => {
         gsap.to(characterHeading, {
           delay: 0,

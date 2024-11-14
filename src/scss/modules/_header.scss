@@ -50,3 +50,54 @@
     }
   }
 }
+
+@media (min-width: 1460px) and (max-width: 1800px) {
+  .header {
+    img {
+      &:nth-child(3) {
+        top: 330px;
+      }
+
+      &:nth-child(4) {
+        top: 300px;
+      }
+
+      &:nth-child(6) {
+        top: 500px;
+      }
+
+      &:nth-child(7) {
+        top: 520px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .header {
+    img {
+      &:nth-child(3) {
+        left: 130px;
+      }
+    }
+
+    img {
+      &:nth-child(4) {
+        right: 245px;
+      }
+    }
+
+    img {
+      &:nth-child(6) {
+        top: 400px;
+      }
+    }
+
+    img {
+      &:nth-child(7) {
+        top: 350px;
+        left: 250px;
+      }
+    }
+  }
+}
