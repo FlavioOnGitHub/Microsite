@@ -57,8 +57,8 @@
       }
 
       img:nth-of-type(3) {
-        clip-path: inset(0 20 40 0);
-        width: 110%;
+        clip-path: inset(0 40 40 0);
+        width: 120%;
         height: 120%;
         top: -10px;
       }
@@ -82,7 +82,7 @@
         }
 
         img:nth-child(3) {
-          left: 0;
+          left: -5px;
           transform: translateZ(-30px);
         }
       }
@@ -133,15 +133,18 @@
   }
 }
 
-.character-section-image-reveal {
-  opacity: 0;
+@keyframes reveal {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
-// The class that blurrs the card elements
-.character-section-blur {
-  filter: blur(20);
-  opacity: 0.2;
-  pointer-events: none;
+.character-section-image-reveal {
+  animation: reveal 2s ease-in;
+  animation-fill-mode: forwards;
 }
 
 // global properties for the pop-ups sections that appear when clicking on the cards
@@ -149,6 +152,7 @@
   position: absolute;
   top: 0;
   z-index: 10;
+  transition: transform 0.2s;
 
   .character-section-pop-up-heading {
     display: flex;
@@ -160,18 +164,50 @@
     font-weight: 400;
     line-height: normal;
     margin-bottom: 15px;
+
+    span:nth-child(1) {
+      transform: translateX(-2000);
+    }
+  }
+
+  p {
+    transform: translateX(2000);
+  }
+
+  a {
+    opacity: 0;
+    transform: translateX(1000);
+  }
+
+  .character-section-pop-up-image-1 {
+    transform: translateX(-2000);
+    opacity: 0;
+  }
+
+  .character-section-pop-up-image-2 {
+    transform: translateX(-2000);
+    opacity: 0;
+  }
+
+  .character-section-pop-up-image-3 {
+    transform: translateX(-2000);
+    opacity: 0;
+  }
+
+  .character-section-pop-up-image-4 {
+    transform: translateX(-2000);
+    opacity: 0;
   }
 }
 
 // specific properties for each character
 .character-section-pop-up-claude {
   pointer-events: none;
-  left: -2500px;
   .character-section-pop-up-heading {
     color: #8accef;
     width: calc(100vw - 3vw);
     justify-content: right;
-    gap: 90px;
+    gap: 300px;
   }
 
   p {
@@ -215,7 +251,6 @@
 // specific properties for ysa
 .character-section-pop-up-ysa {
   pointer-events: none;
-  left: -2500px;
   .character-section-pop-up-heading {
     color: #e78153;
     width: calc(100vw - 3vw);
@@ -265,7 +300,6 @@
 // specific properties for "le baron"
 .character-section-pop-up-baron {
   pointer-events: none;
-  left: -2500px;
   .character-section-pop-up-heading {
     color: #ffbd00;
     width: calc(100vw - 3vw);
@@ -315,7 +349,6 @@
 // specific properties for "le roi"
 .character-section-pop-up-roi {
   pointer-events: none;
-  left: -2500px;
   .character-section-pop-up-heading {
     color: #b581d1;
     width: calc(100vw - 3vw);
@@ -366,5 +399,5 @@
 }
 
 .character-section-pop-up-visible {
-  left: 0px;
+  transform: translateX(0);
 }
