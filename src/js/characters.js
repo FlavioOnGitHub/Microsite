@@ -1,4 +1,7 @@
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const claudeCard = document.querySelector(
   ".character-section-card:nth-of-type(1)"
@@ -575,3 +578,158 @@ characterButton.forEach(function (button) {
     }, 4000);
   });
 });
+
+gsap.fromTo(
+  claudeCard,
+  {
+    y: 100,
+    opacity: 0,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: ".character-section",
+      start: "top+=300 80%",
+      end: "center 30%",
+      markers: true,
+      onEnter: () => {
+        gsap.to(claudeCard, { delay: 0, y: 0, opacity: 1, duration: 0.3 });
+      },
+      onEnterBack: () => {
+        gsap.to(claudeCard, { delay: 0, y: 0, opacity: 1, duration: 0.3 });
+      },
+      onLeaveBack: () => {
+        gsap.to(claudeCard, { delay: 0, y: 100, opacity: 0, duration: 0.3 });
+      },
+    },
+  }
+);
+
+gsap.fromTo(
+  ysaCard,
+  {
+    y: 100,
+    opacity: 0,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: ".character-section",
+      start: "top+=300 80%",
+      end: "center 30%",
+      markers: true,
+      onEnter: () => {
+        gsap.to(ysaCard, { delay: 0.2, y: 0, opacity: 1, duration: 0.3 });
+      },
+      onEnterBack: () => {
+        gsap.to(ysaCard, { delay: 0.2, y: 0, opacity: 1, duration: 0.3 });
+      },
+      onLeaveBack: () => {
+        gsap.to(ysaCard, { delay: 0.2, y: 100, opacity: 0, duration: 0.3 });
+      },
+    },
+  }
+);
+
+gsap.fromTo(
+  baronCard,
+  {
+    y: 100,
+    opacity: 0,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: ".character-section",
+      start: "top+=300 80%",
+      end: "center 30%",
+      markers: true,
+      onEnter: () => {
+        gsap.to(baronCard, { delay: 0.4, y: 0, opacity: 1, duration: 0.3 });
+      },
+      onEnterBack: () => {
+        gsap.to(baronCard, { delay: 0.4, y: 0, opacity: 1, duration: 0.3 });
+      },
+      onLeaveBack: () => {
+        gsap.to(baronCard, { delay: 0.4, y: 100, opacity: 0, duration: 0.3 });
+      },
+    },
+  }
+);
+
+gsap.fromTo(
+  roiCard,
+  {
+    y: 100,
+    opacity: 0,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: ".character-section",
+      start: "top+=300 80%",
+      end: "center 30%",
+      markers: true,
+      onEnter: () => {
+        gsap.to(roiCard, { delay: 0.6, y: 0, opacity: 1, duration: 0.3 });
+      },
+      onEnterBack: () => {
+        gsap.to(roiCard, { delay: 0.6, y: 0, opacity: 1, duration: 0.3 });
+      },
+      onLeaveBack: () => {
+        gsap.to(roiCard, { delay: 0.6, y: 100, opacity: 0, duration: 0.3 });
+      },
+    },
+  }
+);
+
+gsap.fromTo(
+  characterHeading,
+  {
+    y: 20,
+    opacity: 0,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: ".character-section",
+      start: "top 80%",
+      end: "center 30%",
+      markers: true,
+      onEnter: () => {
+        gsap.to(characterHeading, {
+          delay: 0,
+          y: 0,
+          opacity: 1,
+          duration: 0.3,
+        });
+      },
+      onEnterBack: () => {
+        gsap.to(characterHeading, {
+          delay: 0,
+          y: 0,
+          opacity: 1,
+          duration: 0.3,
+        });
+      },
+      onLeaveBack: () => {
+        gsap.to(characterHeading, {
+          delay: 0,
+          y: 20,
+          opacity: 0,
+          duration: 0.3,
+        });
+      },
+    },
+  }
+);

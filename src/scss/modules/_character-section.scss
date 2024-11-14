@@ -31,14 +31,13 @@
   .character-section-card-container {
     display: flex;
     justify-content: space-between;
-    padding: 0 80px 95px;
 
     .character-section-card {
-      width: 235px;
-      height: 315px;
       position: relative;
       transform-style: preserve-3d;
       perspective: 1000px;
+      width: 235px;
+      height: 315px;
 
       &:hover {
         cursor: pointer;
@@ -143,7 +142,7 @@
 }
 
 .character-section-image-reveal {
-  animation: reveal 2s ease-in;
+  animation: reveal 1s ease-in;
   animation-fill-mode: forwards;
   animation-delay: 2s;
 }
@@ -401,4 +400,16 @@
 
 .character-section-pop-up-visible {
   transform: translateX(0);
+}
+
+@media (max-width: 1600px) {
+  .character-section-card-container {
+    padding: 0 80px 95px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .character-section-card-container {
+    padding: 0 40px 95px;
+  }
 }
