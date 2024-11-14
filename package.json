@@ -22,7 +22,7 @@
       "(.*)\\.(woff|woff2?)": "fonts/$1.$2",
       "(.*)\\.(mp3)": "audio/$1.$2",
       "(.*)\\.(mp4|ogg|webm)": "video/$1.$2",
-      "(.*)\\.(svg|png|gif|jpg|webp)": "img/$1{.hash}.$2"
+      "(.*)\\.(svg|png|gif|jpg|jpeg|webp)": "img/$1.{hash}.$2"
     },
     "silent": true,
     "development": {
@@ -37,9 +37,11 @@
     "posthtml-include": "^2.0.1",
     "posthtml-inline-svg": "^0.2.0",
     "rimraf": "^6.0.1",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "sharp": "^0.31.3"
   },
   "dependencies": {
+    "gsap": "^3.12.5",
     "vanilla-tilt": "^1.8.1"
   }
 }

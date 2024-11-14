@@ -1,7 +1,26 @@
+nav {
+  background: #d6d9e7;
+  padding-top: 115px;
+}
+
 .nav {
   display: flex;
   padding: 26px 32px;
   gap: 230px;
   justify-content: center;
-  background: #d6d9e7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 15;
+  transition: transform 0.5s ease-out;
+}
+
+.nav-scrolling-down {
+  transform: translatey(-100%);
+}
+
+.nav-scroll-locked {
+  opacity: 0;
+  pointer-events: none;
 }

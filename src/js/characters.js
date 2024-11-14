@@ -19,6 +19,8 @@ const ysaPopup = document.querySelector(".character-section-pop-up-ysa");
 const characterHeading = document.querySelector(".character-section-heading");
 const characterButton = document.querySelectorAll(".button-character");
 
+const nav = document.querySelector(".nav");
+
 const hiddenClaude = document.querySelector(
   ".character-section-image img:nth-of-type(2)"
 );
@@ -43,6 +45,7 @@ function lockScroll() {
     top: 1350,
     behavior: "smooth",
   });
+  nav.classList.add("nav-scroll-locked");
 }
 
 function unlockScroll() {
@@ -110,5 +113,6 @@ characterButton.forEach(function (button) {
       hiddenRoi.classList.add("character-section-image-reveal");
     }
     unlockScroll();
+    nav.classList.remove("nav-scroll-locked");
   });
 });

@@ -1,6 +1,7 @@
 .character-section {
   background: linear-gradient(180deg, #000 0%, #1c011f 100%);
   position: relative;
+  z-index: 10;
 
   .character-section-gradient {
     width: 100%;
@@ -8,7 +9,7 @@
     position: absolute;
     z-index: 5;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
-    top: -90px;
+    top: -100px;
   }
 
   .character-section-heading {
