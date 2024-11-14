@@ -145,6 +145,7 @@
 .character-section-image-reveal {
   animation: reveal 2s ease-in;
   animation-fill-mode: forwards;
+  animation-delay: 2s;
 }
 
 // global properties for the pop-ups sections that appear when clicking on the cards

@@ -40,16 +40,16 @@ const tlAppear = gsap.timeline();
 const tlDiseappear = gsap.timeline();
 
 function lockScroll() {
-  document.body.classList.add("lock-scroll");
   window.scrollTo({
     top: 1350,
     behavior: "smooth",
   });
+  document.documentElement.style.overflowY = "hidden";
   nav.classList.add("nav-scroll-locked");
 }
 
 function unlockScroll() {
-  document.body.classList.remove("lock-scroll");
+  document.documentElement.style.overflowY = "auto";
 }
 
 claudeCard.addEventListener("click", function () {
@@ -296,7 +296,7 @@ characterButton.forEach(function (button) {
         )
         .to(
           ".character-section-pop-up-claude p",
-          { x: 1000, duration: 0.5 },
+          { x: 1500, duration: 0.5 },
           "<"
         )
         .to(
@@ -348,6 +348,7 @@ characterButton.forEach(function (button) {
                 top: 1900,
                 behavior: "smooth",
               });
+              nav.classList.remove("nav-scroll-locked");
             },
           },
           "<"
@@ -367,7 +368,7 @@ characterButton.forEach(function (button) {
           { x: -1500, duration: 0.3, opacity: 1 },
           "<"
         )
-        .to(".character-section-pop-up-ysa p", { x: 1000, duration: 0.5 }, "<")
+        .to(".character-section-pop-up-ysa p", { x: 1500, duration: 0.5 }, "<")
         .to(
           ".character-section-pop-up-ysa .character-section-pop-up-image-2",
           { x: -1500, duration: 0.3, opacity: 1 },
@@ -417,6 +418,7 @@ characterButton.forEach(function (button) {
                 top: 1900,
                 behavior: "smooth",
               });
+              nav.classList.remove("nav-scroll-locked");
             },
           },
           "<"
@@ -438,7 +440,7 @@ characterButton.forEach(function (button) {
         )
         .to(
           ".character-section-pop-up-baron p",
-          { x: 1000, duration: 0.5 },
+          { x: 1500, duration: 0.5 },
           "<"
         )
         .to(
@@ -490,6 +492,7 @@ characterButton.forEach(function (button) {
                 top: 1900,
                 behavior: "smooth",
               });
+              nav.classList.remove("nav-scroll-locked");
             },
           },
           "<"
@@ -509,7 +512,7 @@ characterButton.forEach(function (button) {
           { x: -1500, duration: 0.3, opacity: 1 },
           "<"
         )
-        .to(".character-section-pop-up-roi p", { x: 1000, duration: 0.5 }, "<")
+        .to(".character-section-pop-up-roi p", { x: 1500, duration: 0.5 }, "<")
         .to(
           ".character-section-pop-up-roi .character-section-pop-up-image-2",
           { x: -1500, duration: 0.3, opacity: 1 },
@@ -559,6 +562,7 @@ characterButton.forEach(function (button) {
                 top: 1900,
                 behavior: "smooth",
               });
+              nav.classList.remove("nav-scroll-locked");
             },
           },
           "<"
@@ -566,8 +570,8 @@ characterButton.forEach(function (button) {
       hiddenRoi.classList.add("character-section-image-reveal");
       roiStatus = 0;
     }
-
-    unlockScroll();
-    nav.classList.remove("nav-scroll-locked");
+    setTimeout(() => {
+      unlockScroll();
+    }, 4000);
   });
 });
