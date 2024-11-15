@@ -159,7 +159,6 @@
     align-items: center;
     text-align: center;
     font-family: "Carol Gothic";
-    font-size: 210px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -227,8 +226,8 @@
 
   .character-section-pop-up-image-1 {
     top: 50px;
-    left: -225px;
-    z-index: 1;
+    left: -125px;
+    z-index: 2;
   }
 
   .character-section-pop-up-image-2 {
@@ -354,7 +353,6 @@
     width: calc(100vw - 3vw);
     justify-content: right;
     gap: 60px;
-    font-size: 14vw;
     padding-top: 50px;
   }
 
@@ -402,14 +400,111 @@
   transform: translateX(0);
 }
 
+@media (min-width: 1600px) {
+  .character-section-card-container {
+    padding: 0 80px 95px;
+  }
+
+  .character-section-pop-up-heading {
+    font-size: 210px;
+  }
+}
+
 @media (max-width: 1600px) {
   .character-section-card-container {
     padding: 0 80px 95px;
+  }
+
+  .character-section-pop-up-heading {
+    font-size: 210px;
+  }
+
+  .character-section-pop-up-roi {
+    .character-section-pop-up-heading {
+      font-size: 170px;
+    }
   }
 }
 
 @media (max-width: 1400px) {
   .character-section-card-container {
     padding: 0 40px 95px;
+  }
+
+  .character-section-pop-up-heading {
+    font-size: 180px !important;
+    gap: 100px !important;
+  }
+
+  .character-section-pop-up-roi {
+    .character-section-pop-up-heading {
+      font-size: 150px !important;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .character-section-pop-up-heading {
+    font-size: 150px !important;
+    gap: 100px !important;
+  }
+
+  .character-section-pop-up-claude {
+    .character-section-pop-up-image-2 {
+      left: 200px !important;
+    }
+    .character-section-pop-up-image-3 {
+      left: 500px !important;
+    }
+    .character-section-pop-up-image-4 {
+      left: 750px !important;
+    }
+  }
+
+  .character-section-pop-up-ysa {
+    .character-section-pop-up-image-2 {
+      left: 200px !important;
+    }
+    .character-section-pop-up-image-3 {
+      left: 500px !important;
+    }
+    .character-section-pop-up-image-4 {
+      left: 750px !important;
+    }
+  }
+
+  .character-section-pop-up-baron {
+    .character-section-pop-up-image-1 {
+      width: 600px !important;
+      top: 100px;
+    }
+
+    .character-section-pop-up-image-2 {
+      left: 400px !important;
+    }
+    .character-section-pop-up-image-3 {
+      left: 650px !important;
+    }
+    .character-section-pop-up-image-4 {
+      left: 900px !important;
+    }
+  }
+
+  .character-section-pop-up-roi {
+    .character-section-pop-up-image-1 {
+      width: 900px;
+      top: 300px;
+      left: -200px;
+      z-index: 2;
+    }
+    .character-section-pop-up-image-2 {
+      left: 250px !important;
+    }
+    .character-section-pop-up-image-3 {
+      left: 550px !important;
+    }
+    .character-section-pop-up-image-4 {
+      left: 900px !important;
+    }
   }
 }
