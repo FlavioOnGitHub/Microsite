@@ -20,7 +20,7 @@
     margin-bottom: 30px;
     color: var(--yellow, #f3bd20);
     text-align: center;
-    font-family: "Carol Gothic";
+    font-family: "carol-gothic";
     font-size: 80px;
     font-style: normal;
     font-weight: 400;
@@ -150,6 +150,7 @@
 // global properties for the pop-ups sections that appear when clicking on the cards
 .character-section-pop-up {
   position: absolute;
+  // it would be more optimized if the pop-ups where on position fixed
   top: 0;
   z-index: 10;
   transition: transform 0.2s;
@@ -158,7 +159,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    font-family: "Carol Gothic";
+    font-family: "carol-gothic";
     font-style: normal;
     font-weight: 400;
     line-height: normal;

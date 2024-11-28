@@ -9,6 +9,13 @@ footer {
   align-items: center;
   justify-content: space-between;
 
+  a {
+    transition: scale 0.2s ease;
+    &:hover {
+      scale: 1.05;
+    }
+  }
+
   .footer-links {
     display: flex;
     gap: 30px;
@@ -20,6 +27,11 @@ footer {
       font-style: normal;
       font-weight: 800;
       line-height: normal;
+      transition: scale 0.2s ease;
+
+      &:hover {
+        scale: 1.1;
+      }
     }
   }
 }
